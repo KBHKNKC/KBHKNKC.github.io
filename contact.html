@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>作者联系方式</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				min-height: 100dvh;
+				background: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 100%);
+				color: #1f2937;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 24px;
+			}
+
+			.card {
+				width: min(680px, 100%);
+				background: #fff;
+				border: 1px solid rgba(0, 0, 0, 0.08);
+				border-radius: 16px;
+				box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+				padding: 24px;
+			}
+
+			h1 {
+				font-size: 24px;
+				margin-bottom: 8px;
+			}
+
+			.desc {
+				color: #6b7280;
+				font-size: 14px;
+				margin-bottom: 20px;
+			}
+
+			.list {
+				list-style: none;
+				display: grid;
+				gap: 12px;
+				margin-bottom: 24px;
+			}
+
+			.item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+				padding: 12px 14px;
+				border-radius: 10px;
+				background: #f9fafb;
+				border: 1px solid #e5e7eb;
+			}
+
+			.label {
+				font-weight: 600;
+				color: #374151;
+				min-width: 88px;
+			}
+
+			.value {
+				flex: 1;
+				text-align: right;
+				color: #111827;
+				word-break: break-all;
+			}
+
+			.actions {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+			}
+
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 10px 14px;
+				border-radius: 10px;
+				text-decoration: none;
+				font-size: 14px;
+				font-weight: 600;
+				border: 1px solid transparent;
+			}
+
+			.btn-primary {
+				background: #4f46e5;
+				color: #fff;
+			}
+
+			.btn-secondary {
+				background: #fff;
+				color: #374151;
+				border-color: #d1d5db;
+			}
+
+			@media (max-width: 640px) {
+				.card {
+					padding: 18px;
+				}
+
+				h1 {
+					font-size: 20px;
+				}
+
+				.item {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.value {
+					text-align: left;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="card">
+			<h1>作者联系方式</h1>
+			<p class="desc">欢迎联系作者，以下为常用联系方式。</p>
+
+			<ul class="list">
+				<li class="item">
+					<span class="label">微信</span>
+					<span class="value">666</span>
+				</li>
+				<li class="item">
+					<span class="label">QQ</span>
+					<span class="value">55</span>
+				</li>
+				<li class="item">
+					<span class="label">邮箱</span>
+					<a class="value" href="mailto:ait@outlook.com">ait@outlook.com</a>
+				</li>
+				<li class="item">
+					<span class="label">GitHub</span>
+					<span class="value">KBH</span>
+				</li>
+				<li class="item">
+					<span class="label">自定义</span>
+					<span class="value">55</span>
+				</li>
+			</ul>
+
+			<div class="actions">
+				<a class="btn btn-primary" href="index.html">返回首页</a>
+				<a class="btn btn-secondary" href="mailto:ait@outlook.com">发送邮件</a>
+			</div>
+		</main>
+	</body>
+</html>
