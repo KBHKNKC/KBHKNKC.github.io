@@ -1,159 +1,219 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>作者联系方式</title>
-		<style>
-			* {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系 - KBH</title>
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <script src="js/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .contact-page {
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-			body {
-				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-				min-height: 100dvh;
-				background: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 100%);
-				color: #1f2937;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				padding: 24px;
-			}
+        .contact-card {
+            width: min(680px, 100%);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+        }
 
-			.card {
-				width: min(680px, 100%);
-				background: #fff;
-				border: 1px solid rgba(0, 0, 0, 0.08);
-				border-radius: 16px;
-				box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
-				padding: 24px;
-			}
+        .contact-card h1 {
+            font-size: 24px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
 
-			h1 {
-				font-size: 24px;
-				margin-bottom: 8px;
-			}
+        .contact-card .desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
 
-			.desc {
-				color: #6b7280;
-				font-size: 14px;
-				margin-bottom: 20px;
-			}
+        .contact-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
 
-			.list {
-				list-style: none;
-				display: grid;
-				gap: 12px;
-				margin-bottom: 24px;
-			}
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+        }
 
-			.item {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 12px;
-				padding: 12px 14px;
-				border-radius: 10px;
-				background: #f9fafb;
-				border: 1px solid #e5e7eb;
-			}
+        .contact-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+            min-width: 88px;
+        }
 
-			.label {
-				font-weight: 600;
-				color: #374151;
-				min-width: 88px;
-			}
+        .contact-value {
+            flex: 1;
+            text-align: right;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
 
-			.value {
-				flex: 1;
-				text-align: right;
-				color: #111827;
-				word-break: break-all;
-			}
+        .contact-value a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
 
-			.actions {
-				display: flex;
-				gap: 10px;
-				flex-wrap: wrap;
-			}
+        .contact-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-			.btn {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				padding: 10px 14px;
-				border-radius: 10px;
-				text-decoration: none;
-				font-size: 14px;
-				font-weight: 600;
-				border: 1px solid transparent;
-			}
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
 
-			.btn-primary {
-				background: #4f46e5;
-				color: #fff;
-			}
+        .contact-btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
 
-			.btn-secondary {
-				background: #fff;
-				color: #374151;
-				border-color: #d1d5db;
-			}
+        .contact-btn-secondary {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
 
-			@media (max-width: 640px) {
-				.card {
-					padding: 18px;
-				}
+        @media (max-width: 640px) {
+            .contact-card {
+                padding: 24px;
+            }
 
-				h1 {
-					font-size: 20px;
-				}
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-				.item {
-					flex-direction: column;
-					align-items: flex-start;
-				}
+            .contact-value {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" class="logo-svg">
+                    <defs>
+                        <linearGradient gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="38" x1="0" id="kbh-gradient">
+                            <stop stop-color="#973BED" />
+                            <stop stop-color="#007CFF" offset="1" />
+                        </linearGradient>
+                    </defs>
+                    <text x="10" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="url(#kbh-gradient)" class="kbh-text">KBH</text>
+                </svg>
+            </a>
+            <div class="header-actions">
+                <button class="search-btn" id="searchBtn" title="搜索">🔍</button>
+                <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+            </div>
+        </div>
+    </header>
 
-				.value {
-					text-align: left;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<main class="card">
-			<h1>作者联系方式</h1>
-			<p class="desc">欢迎联系作者，以下为常用联系方式。</p>
+    <!-- Layout -->
+    <div class="layout">
+        <!-- Left Sidebar: Navigation -->
+        <nav class="side-nav" id="mainNav">
+            <a href="index.html" class="side-nav-item">首页</a>
+            <a href="quotes.html" class="side-nav-item">语录</a>
+            <a href="contact.html" class="side-nav-item active">联系</a>
+            <a href="sticky-wall.html" class="side-nav-item">便签墙</a>
+            <a href="wallpapers.html" class="side-nav-item">壁纸欣赏</a>
+            <a href="links.html" class="side-nav-item">友链</a>
+            <a href="about.html" class="side-nav-item">关于</a>
+        </nav>
 
-			<ul class="list">
-				<li class="item">
-					<span class="label">微信</span>
-					<span class="value">666</span>
-				</li>
-				<li class="item">
-					<span class="label">QQ</span>
-					<span class="value">55</span>
-				</li>
-				<li class="item">
-					<span class="label">邮箱</span>
-					<a class="value" href="mailto:ait@outlook.com">ait@outlook.com</a>
-				</li>
-				<li class="item">
-					<span class="label">GitHub</span>
-					<span class="value">KBH</span>
-				</li>
-				<li class="item">
-					<span class="label">自定义</span>
-					<span class="value">55</span>
-				</li>
-			</ul>
+        <!-- Main Content -->
+        <div class="article-scroll">
+            <div class="contact-page">
+                <div class="contact-card">
+                    <h1>📬 联系方式</h1>
+                    <p class="desc">欢迎联系作者，以下为常用联系方式。</p>
 
-			<div class="actions">
-				<a class="btn btn-primary" href="index.html">返回首页</a>
-				<a class="btn btn-secondary" href="mailto:ait@outlook.com">发送邮件</a>
-			</div>
-		</main>
-	</body>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-weixin"></use>
+                            </svg>
+                            <span class="contact-value">期待</span>
+                        </li>
+                        <li class="contact-item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-tuite"></use>
+                            </svg>
+                            <span class="contact-value">55</span>
+                        </li>
+                        <li class="contact-item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-youxiang"></use>
+                            </svg>
+                            <a class="contact-value" href="mailto:aioot@outlook.com">aioot@outlook.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                            <a class="contact-value" href="https://github.com/KBHKNKC" target="_blank" rel="noopener noreferrer">KBH</a>
+                        </li>
+                    </ul>
+
+                    <div class="contact-actions">
+                        <a class="contact-btn contact-btn-primary" href="index.html">返回首页</a>
+                        <a class="contact-btn contact-btn-secondary" href="mailto:ait@outlook.com">发送邮件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget profile-widget">
+                <div class="avatar">
+                    <img src="img/hero.png" alt="作者头像" />
+                </div>
+                <div class="name">KBH</div>
+                <div class="bio">技术爱好者，分享AI与开发经验</div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/blog.js"></script>
+</body>
 </html>

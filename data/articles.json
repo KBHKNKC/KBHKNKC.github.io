@@ -1,0 +1,106 @@
+{
+  "site": {
+    "name": "KBH",
+    "slogan": "记录技术，分享思考。",
+    "author": "KBH",
+    "avatar": "img/hero.png",
+    "bio": "技术爱好者，分享AI与开发经验",
+    "stats": {
+      "articles": 42,
+      "categories": 6,
+      "tags": 28
+    }
+  },
+  "categories": [
+    { "id": "ai", "name": "AI大模型", "count": 12 },
+    { "id": "agent", "name": "Agent搭建", "count": 8 },
+    { "id": "linux", "name": "Linux运维", "count": 10 },
+    { "id": "software", "name": "软件推荐", "count": 6 },
+    { "id": "notes", "name": "学习笔记", "count": 4 },
+    { "id": "life", "name": "生活随笔", "count": 2 }
+  ],
+  "tags": [
+    "GPT", "AI", "Python", "Debian", "Nginx", "Docker",
+    "Agent", "API", "WordPress", "Linux", "SSH", "前端"
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "大模型国内调用指南：三种方案实战对比",
+      "excerpt": "详细对比国内调用大语言模型的三种主流方案，包括直连、中转和代理方式，分析各自的优缺点和适用场景。",
+      "category": "ai",
+      "categoryName": "AI大模型",
+      "tags": ["AI", "GPT", "API"],
+      "author": "KBH",
+      "date": "2026-04-18",
+      "views": 1280,
+      "cover": "img/news/img01.jpg",
+      "content": "<p>随着大语言模型的快速发展，越来越多的开发者需要在国内环境中调用这些强大的AI能力。本文将详细对比三种主流方案。</p><h2>方案一：直接调用官方API</h2><p>最理想的方式当然是直接调用OpenAI等官方API，但由于网络限制，这种方式在国内往往不太可行。</p><h2>方案二：使用中转服务</h2><p>中转服务是目前最流行的方案，通过第三方服务转发API请求，实现稳定调用。</p><h2>方案三：自建代理</h2><p>对于有技术能力的开发者，可以自建代理服务器，灵活性和可控性最高。</p><h2>方案对比总结</h2><blockquote>选择合适的方案需要根据实际需求、预算和技术能力综合考虑。</blockquote>"
+    },
+    {
+      "id": 2,
+      "title": "AI Agent 开发完全指南：用 Python 从零构建智能体",
+      "excerpt": "从零开始学习如何使用Python构建AI Agent，包括架构设计、工具调用、记忆系统等核心模块的实现。",
+      "category": "agent",
+      "categoryName": "Agent搭建",
+      "tags": ["AI", "Agent", "Python"],
+      "author": "KBH",
+      "date": "2026-04-15",
+      "views": 956,
+      "cover": "img/news/img02.jpg",
+      "content": "<p>AI Agent 正在成为AI应用开发的新范式。本文将带你从零开始构建一个完整的AI智能体。</p><h2>什么是 AI Agent</h2><p>AI Agent 是能够感知环境、做出决策并执行行动的AI系统。</p><h2>核心架构</h2><p>一个完整的Agent包含感知、决策、执行三个核心模块。</p><h2>工具调用</h2><pre><code>def call_tool(tool_name, params):\n    # 工具调用实现\n    pass</code></pre><h2>记忆系统</h2><p>记忆系统是Agent保持上下文的关键，包括短期记忆和长期记忆。</p>"
+    },
+    {
+      "id": 3,
+      "title": "Debian 12 创建新用户仅允许 SSH 密钥登录并禁止 root 直接登录",
+      "excerpt": "服务器安全加固教程：创建新用户，配置SSH密钥认证，禁用root直接登录和密码认证。",
+      "category": "linux",
+      "categoryName": "Linux运维",
+      "tags": ["Debian", "Linux", "SSH"],
+      "author": "KBH",
+      "date": "2026-04-12",
+      "views": 723,
+      "cover": "img/news/img03.jpg",
+      "content": "<p>服务器安全是运维的第一要务。本文将详细介绍如何加固Debian 12服务器的SSH访问。</p><h2>创建新用户</h2><pre><code>adduser newuser\nusermod -aG sudo newuser</code></pre><h2>配置SSH密钥</h2><p>将公钥添加到 ~/.ssh/authorized_keys 文件中。</p><h2>修改SSH配置</h2><pre><code>PermitRootLogin no\nPasswordAuthentication no</code></pre>"
+    },
+    {
+      "id": 4,
+      "title": "为什么 Agent 产品很难做：从 Clawdbot 热潮看 OpenClaw 的真实边界",
+      "excerpt": "深度分析AI Agent产品的开发难点，结合Clawdbot案例探讨Agent技术的边界与长期价值。",
+      "category": "agent",
+      "categoryName": "Agent搭建",
+      "tags": ["Agent", "AI"],
+      "author": "KBH",
+      "date": "2026-04-10",
+      "views": 1560,
+      "cover": "img/news/img04.jpg",
+      "content": "<p>AI Agent产品近期备受关注，但真正做好一个Agent产品远比想象中困难。</p><h2>技术边界</h2><p>当前的Agent技术还存在诸多限制，包括上下文长度、工具调用可靠性等问题。</p><h2>产品挑战</h2><p>从技术Demo到可用的产品，需要跨越可靠性、用户体验等多重障碍。</p>"
+    },
+    {
+      "id": 5,
+      "title": "Debian 设置 Swap 交换分区，并设置 Swap 分区的使用优先级",
+      "excerpt": "Linux服务器内存优化教程：创建Swap交换分区，调整swappiness参数优化系统性能。",
+      "category": "linux",
+      "categoryName": "Linux运维",
+      "tags": ["Debian", "Linux"],
+      "author": "KBH",
+      "date": "2026-04-08",
+      "views": 445,
+      "cover": "img/news/img05.jpg",
+      "content": "<p>Swap交换分区是Linux系统内存管理的重要组成部分。</p><h2>创建Swap文件</h2><pre><code>dd if=/dev/zero of=/swapfile bs=1M count=2048\nmkswap /swapfile\nswapon /swapfile</code></pre><h2>调整swappiness</h2><p>swappiness参数控制系统使用Swap的倾向程度。</p>"
+    },
+    {
+      "id": 6,
+      "title": "315曝光的GEO灰产，一人公司如何借AI搜索拿到合法流量",
+      "excerpt": "分析GEO灰产现状，探讨AI时代内容创作者如何获取合法、可持续的流量增长。",
+      "category": "ai",
+      "categoryName": "AI大模型",
+      "tags": ["AI", "SEO"],
+      "author": "KBH",
+      "date": "2026-04-05",
+      "views": 2100,
+      "cover": "img/news/img06.jpg",
+      "content": "<p>随着AI搜索的普及，流量获取方式正在发生根本性变化。</p><h2>GEO灰产现状</h2><p>315曝光了大量利用AI生成低质内容进行SEO作弊的行为。</p><h2>合法流量策略</h2><p>一人公司应该专注于高质量内容创作，借助AI提升效率而非替代创作。</p>"
+    }
+  ]
+}
