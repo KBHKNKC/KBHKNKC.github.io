@@ -173,7 +173,7 @@
                     '</div>' +
                     '<div class="card-meta">' +
                         '<span class="author">' +
-                            '<img src="img/hero.png" alt="' + escapeHtml(article.author) + '" />' +
+                            '<img src="img/tx1.png" alt="' + escapeHtml(article.author) + '" />' +
                             escapeHtml(article.author) +
                         '</span>' +
                         '<span>📅 ' + article.date + '</span>' +

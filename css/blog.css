@@ -381,6 +381,10 @@ body {
     min-height: 200px;
     flex-shrink: 0;
     overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .article-card .card-cover img {
@@ -388,6 +392,28 @@ body {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+}
+
+.article-card .card-cover img[src=""],
+.article-card .card-cover img:not([src]),
+.article-card .card-cover img[style*="display: none"] {
+    display: none;
+}
+
+.article-card:nth-child(2n) .card-cover {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.article-card:nth-child(3n) .card-cover {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.article-card:nth-child(4n) .card-cover {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.article-card:nth-child(5n) .card-cover {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
 .article-card:hover .card-cover img {
