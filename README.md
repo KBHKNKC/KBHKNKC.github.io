@@ -137,7 +137,7 @@ GitHub Pages 会自动从 `main` 分支部署网站。
 ## 📮 联系方式
 
 - 网站: [https://kbhknkc.github.io](https://kbhknkc.github.io)
-- 邮箱: 请在联系页面查看
+- 邮箱:kbhknkc@gmail.com
 - GitHub: [@KBHKNKC](https://github.com/KBHKNKC)
 
 ## ⭐ 致谢
