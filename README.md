@@ -1,5 +1,4 @@
 <p align="center">
-  <!-- 第一行：项目状态 -->
   <img src="https://img.shields.io/github/stars/你的用户名/你的仓库名?style=flat&logo=github&label=Stars&color=333" alt="Stars"/>
   <img src="https://img.shields.io/badge/CI-passing-green?style=flat&logo=github&color=333" alt="CI"/>
   <img src="https://img.shields.io/github/license/你的用户名/你的仓库名?style=flat&color=333" alt="License"/>
