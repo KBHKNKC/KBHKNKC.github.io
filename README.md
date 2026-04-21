@@ -1,11 +1,21 @@
+<div align="center">
 
+  <!-- 第一行：项目状态 -->
+  <img src="https://img.shields.io/github/stars/你的用户名/你的仓库名?style=flat&logo=github&label=Stars&color=333" alt="Stars"/>
+  <img src="https://img.shields.io/badge/CI-passing-green?style=flat&logo=github&color=333" alt="CI"/>
+  <img src="https://img.shields.io/github/license/你的用户名/你的仓库名?style=flat&color=333" alt="License"/>
+
+  <br><br>
+
+  <!-- 第二行：技术栈 -->
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript"/>
   <img src="https://img.shields.io/badge/SweetAlert2-FFD200?style=flat&logo=sweetalert2&logoColor=black" alt="SweetAlert2"/>
   <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub"/>
-</p>
+
+</div>
 
 
 # KBH 个人博客
